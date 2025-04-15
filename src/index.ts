@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 👇 CORS CONFIGURADO BIEN
+
 app.use(cors({
   origin: ['http://localhost:5173', 'https://sistema-domicilios-frontend.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
