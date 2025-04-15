@@ -3,14 +3,20 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import sectorRoutes from './routes/sector.routes';
 
-// Cargar variables de entorno desde el archivo .env
+// Cargar variables de entorno
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middlewares
-app.use(cors());
+// Configurar CORS con orígenes permitidos
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://sistema-domicilios-frontend.vercel.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
+
+// Middleware para parsear JSON
 app.use(express.json());
 
 // Rutas
