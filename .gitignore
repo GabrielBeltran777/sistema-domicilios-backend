@@ -1,0 +1,6 @@
+# Ignora la carpeta de dependencias
+node_modules/
+
+# Otros comunes (opcional)
+dist/
+
