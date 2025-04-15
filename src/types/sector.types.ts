@@ -1,4 +1,4 @@
-// src/types/sector.types.ts
+
 export interface Coordenadas {
     lat: number;
     lng: number;

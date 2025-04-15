@@ -25,10 +25,10 @@ export const createSector = async (req: Request, res: Response) => {
 
 export const getSectors = async (_req: Request, res: Response) => {
   try {
-    // Obtener todos los sectores de la base de datos
+   
     const sectors = await getSectorsService();
     
-    // Retornar los sectores en la respuesta
+   
     res.status(200).json({ sectors });
   } catch (error) {
     console.error('Error obteniendo sectores:', error);
